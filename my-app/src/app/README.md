@@ -30,7 +30,7 @@ It is not a good idea to implement it inside the component because it will bind 
 
 In Angular we call it *service*
 
-## ch-09-dependency-injection
+## ch-10-dependency-injection
 
 Well we implmented the fake HTTP server but still we had initialized the fake server in the contructor of [./courses.services.ts] which is also not good. 
 
