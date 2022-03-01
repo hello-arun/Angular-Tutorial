@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { CoursesService } from "./courses.service";
 
 @Component({
     selector: 'courses', // div class=> . id=>#
@@ -17,5 +18,12 @@ import { Component } from "@angular/core";
 })
 export class CoursesComponent {
     title = "List of courses"
-    courses = ["Course1", "Course2", "Course3"]
+    courses;
+
+    constructor(){
+        let service = new CoursesService();
+        this.courses = service.getCourses();
+    }
+
+    // Logic for calling an HTTP services
 }
