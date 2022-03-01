@@ -21,3 +21,7 @@ We Also need latest version of typescript
 ```bash
 npm install -g typescript
 ```
+
+## Angular fundmentals
+
+Go to [./my-app/src/app](./my-app/src/app) for tutorial.
