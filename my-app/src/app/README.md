@@ -30,7 +30,7 @@ It is not a good idea to implement it inside the component because it will bind 
 
 In Angular we call it *service*
 
-## ch-09-dependency-injection
+## ch-10-dependency-injection
 
 Well we implmented the fake HTTP server but still we had initialized the fake server in the contructor of [./courses.services.ts] which is also not good. 
 
@@ -39,3 +39,13 @@ We will implement dependency injection in this commit.
 *Do not forget to Register `CoursesService` in `app.module.ts`*
 
 So after registering CoursesServices in `app.module.ts` we will have only a single instance of `CoursesService` which will be accessible to the whole application and therefore saves whole lot of resources. This is called `Singleton`.
+
+## ch-11-Dep-Inj-From-Angular-CLI
+
+We can use this commmand line to create and register a new service
+
+```bash
+# cd my-app
+ng g s email
+# ng generate service service-name
+```
