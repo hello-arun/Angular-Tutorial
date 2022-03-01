@@ -1,25 +1,34 @@
-let message = 'abc'
-message.endsWith('c') // beautifull intellisense
-
-// Type Assertions
-let msg; // Any type 
-msg = 'abc' // later declared as a string
-let endsWithC;
-endsWithC = msg.endsWith('c') // No intellisense
-endsWithC = (<string>msg).endsWith('c') // beautiful intellisense
-endsWithC = (msg as string).endsWith('c') // beautiful intellisense
-
-
-//Arrow Functions
-
-let log = function(message) {
-    console.log(message)
+// Verbose way of doint
+let drawPoint = (point: { x: number, y: number }) => {
+    console.log("X: " + point.x + ", Y: " + point.y)
 }
-// Simple
-let doLog = (message) => {
-    console.log(message)
-    // more lines here
-}
+drawPoint({
+    x: 1,
+    y: 2
+})
 
-// For single line Simpler
-let singleDoLog = (message) => console.log(message)
+console.log("\n---Better Implementation---")
+
+// To implement method we need class
+class Point {
+    x: number
+    y: number
+    z: number
+    constructor(x: number, y: number, z?: number) {
+        // parameter with ? are optional
+        // if a variable is optional then all other variable
+        // after that need also to be optional.
+        this.x = x
+        this.y = y
+        this.z = z
+    }
+
+    draw() {
+        console.log("X: " + this.x + ", Y: " + this.y) // implementation goes here
+    }
+    getDistance(another: Point) {
+        // implentation goes here
+    }
+}
+let p = new Point(10, 20)
+p.draw()
