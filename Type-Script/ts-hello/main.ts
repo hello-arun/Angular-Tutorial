@@ -1,17 +1,36 @@
-function doSomething() {
-    // Do not use var keyword it expand its scope outside the block
-    for (let i = 0; i < 5; i++) {
-        console.log(i);
-    }
-    console.log('Finally... ' + i)  // i can not be accessed here > Correct
-    console.log("-----")
-    for (var j = 0; j < 5; j++) {
-        console.log(j);
-    }
-    console.log('Finally... ' + j); // i can be accessed here > wrong
+// As we know all this code will get compiled without any error
+// but Type script warns us about the bad habit.
 
-    // Anyway ts copiler comiler it to valid javascript code but 
-    // we should always skip using var variables.
-}
+var a = 5
+a = "Hello" // Not valid in TypScript
+// If we do not know value ahead of time 
+// This is acceptabel but it also creates probelem
+var b
+b = 1
+b = true
+b = 'a'
+// Whats the solution ??
+// Here is the sol
+var c
+c = 1
+c = true // You can see it shows error warning  
 
-doSomething();
+// All different types of variables
+var aa: number
+var bb: boolean
+var cc: string
+var dd: any
+var ee: number[] = [1, 2, 3]
+var ff: any[] = [1, true, 'a']
+
+// Bad habit
+const ColorRed = 0
+const ColorGreen = 1
+const ColorBlue = 2
+
+// Good habit
+enum Color { Red, Green, Blue }
+let backgroundColor = Color.Blue  // We get intellisense here
+
+// See the main.js file to get feel how enum works in javascript
+// You will instantly rise in love
