@@ -15,3 +15,9 @@ After that create and launch your Angular Server as
 cd ./my-app
 ng serve --open
 ```
+
+We Also need latest version of typescript
+
+```bash
+npm install -g typescript
+```
