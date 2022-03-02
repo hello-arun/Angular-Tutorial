@@ -135,3 +135,12 @@ imports: [
 
 uppercease
 lowercase
+and many more
+
+## ch-19-custom-pipes
+
+Lets create custom summary pipe. Which trim down the long text to 50 characyers.
+
+1. create [summary.pipe.ts](./summary.pipe.ts)
+2. register that in [app.module.ts](./app.module.ts) under `declaration`.
+3. And you are ready to use that pipe in entire project. example [courses.component.ts](courses.component.ts)
