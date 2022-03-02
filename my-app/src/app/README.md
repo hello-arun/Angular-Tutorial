@@ -32,7 +32,7 @@ In Angular we call it *service*
 
 ## ch-10-dependency-injection
 
-Well we implmented the fake HTTP server but still we had initialized the fake server in the contructor of [./courses.services.ts] which is also not good. 
+Well we implmented the fake HTTP server but still we had initialized the fake server in the contructor of [./courses.services.ts] which is also not good.
 
 We will implement dependency injection in this commit.
 
@@ -51,6 +51,7 @@ ng g s email
 ```
 
 ## ch-12-13-15-16 property-attribute-class-style-binding
+
 {{variable}} This is called interpolation
 
 \[property\]="variable"` This is property binding
@@ -80,3 +81,21 @@ now go to [styles.css](../styles.css) to add bootstrap css styles globally to yo
 `@import "~bootstrap/dist/css/bootstrap.css"`
 
 This line will help
+
+## ch-16-event-binding
+
+Example of event binding
+
+```TypeScript
+    <button (click)="onSave($event)">Save</button>
+//.
+//.
+//.
+onSave($event: MouseEvent) {
+    $event.stopPropagation(); // the event will not bubble up
+    // i.e. the parent container will not respond to this event
+    console.log("Button was clicked")
+    console.log($event)
+        
+}
+```
