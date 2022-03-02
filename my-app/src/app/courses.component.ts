@@ -4,15 +4,25 @@ import { CoursesService } from "./courses.service";
 @Component({
     selector: 'courses', // div class=> . id=>#
     template: `
-    <button (click)="onSave($event)">Save</button>
+    <input #email (keyup.enter)="onKeyUpOld(email.value)" />
+    <input [value]="betterEmail" (keyup.enter)="betterEmail = ($any($event.target).value); onKeyUpBetter()" />
+    <input  [(ngModel)]="modernEmail" (keyup.enter)="onKeyUpModern()"/>
     `
+    // [()] Two way binding Banana in a Box model.
+
 })
 export class CoursesComponent {
-    
-    onSave($event: MouseEvent) {
-        $event.stopPropagation(); // the event will not bubble up
-        // i.e. the container will not respond to this event
-        console.log("Button was clicked")
-        console.log($event)
+
+    betterEmail = "better@gmail.com"
+    modernEmail = "modern@gmail.com"
+
+    onKeyUpOld(email: string) {
+        console.log(email);
+    }
+    onKeyUpBetter() {
+        console.log(this.betterEmail);
+    }
+    onKeyUpModern() {
+        console.log(this.modernEmail);
     }
 }

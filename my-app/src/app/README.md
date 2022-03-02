@@ -99,3 +99,34 @@ onSave($event: MouseEvent) {
         
 }
 ```
+
+## ch-17-Event-Filtering-Two-Way-Binding
+
+If we have an input field and want to log the content of the field
+to console we can achieve it by following 3 methods
+
+```TypeScript
+    <input #email (keyup.enter)="onKeyUpOld(email.value)" />
+    <input [value]="betterEmail" (keyup.enter)="betterEmail = ($any($event.target).value);onKeyUpBetter()" />
+    <input  [(ngModel)]="modernEmail" (keyup.enter)="onKeyUpModern()"/>
+    // Some lines here
+    onKeyUpOld(email: string) {
+        console.log(email);
+    }
+    onKeyUpBetter() {
+        console.log(this.betterEmail);
+    }
+    onKeyUpModern() {
+        console.log(this.modernEmail);
+    }
+    // First method is good-old way of doing things
+    // Second method implments one way binding but useless too verbose
+    // Third one is sweet but we also need to register these property in
+    // app.module.ts by adding this import 
+import { FormsModule } from '@angular/forms';
+//and 
+imports: [
+    //...,
+    FormsModule  // this forms module 
+],
+```
