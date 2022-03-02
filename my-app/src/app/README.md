@@ -61,3 +61,20 @@ Everytime variable change property value will be changed.
 
 Both are okay for binding variables.
 Choose according to your own need.
+
+## ch-14-bootstrap
+
+*How to add bootstrap css styles?*
+
+```bash
+# cd my-app
+npm install bootstrap --save
+```
+
+`--save` will also add this dependency to package.json
+
+now go to [styles.css](../styles.css) to add bootstrap css styles globally to your project.
+
+`@import "~bootstrap/dist/css/bootstrap.css"`
+
+This line will help
