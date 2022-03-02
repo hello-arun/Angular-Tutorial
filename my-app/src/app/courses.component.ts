@@ -5,13 +5,9 @@ import { CoursesService } from "./courses.service";
     selector: 'courses', // div class=> . id=>#
     template: `
     <h2>{{"Title: "+title}}</h2>
-    <button class="btn btn-primary">Save</button>
+    <button class="btn btn-primary" [class.active]="isActive">Save</button>
     <h2 [textContent]="title"></h2>
-    <table>
-    <tr>
-        <td [attr.colSpan]="colSpan"></td>
-    </tr>
-    </table>
+
     <img src="{{imageUrl}}" /> 
     <img [src]="imageUrl" />
     `
@@ -29,7 +25,9 @@ import { CoursesService } from "./courses.service";
     */
 })
 export class CoursesComponent {
-    colSpan=2
+    isActive = true; 
+    // Inspect the source of button after changeing isActive variable
+    // to get indea what is happening
     title = "List of courses"
     imageUrl = "https://picsum.photos/200/300"
 }
