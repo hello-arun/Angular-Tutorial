@@ -50,7 +50,7 @@ ng g s email
 # ng generate service service-name
 ```
 
-## ch-12-property-binding
+## ch-12-13 property-attribute-binding
 {{variable}} This is called interpolation
 
 \[property\]="variable"` This is property binding
