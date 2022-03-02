@@ -130,3 +130,8 @@ imports: [
     FormsModule  // this forms module 
 ],
 ```
+
+## ch-18-Pipes
+
+uppercease
+lowercase
