@@ -50,12 +50,13 @@ ng g s email
 # ng generate service service-name
 ```
 
-## ch-12-13-15 property-attribute-class-binding
+## ch-12-13-15-16 property-attribute-class-style-binding
 {{variable}} This is called interpolation
 
 \[property\]="variable"` This is property binding
 \[attr.attributeName\]="variable" This is attribute binding
 \[class.className\]="variable" This is class binding
+\[style.styleProperty\]="variable" This is style binding
 
 Interpolarion work well for heading,div tags.
 Everytime variable change property value will be changed.
