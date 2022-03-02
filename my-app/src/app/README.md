@@ -54,6 +54,7 @@ ng g s email
 {{variable}} This is called interpolation
 
 \[property\]="variable"` This is property binding
+\[attr.attributeName\]="variable" This is attribute binding
 
 Interpolarion work well for heading,div tags.
 Everytime variable change property value will be changed.

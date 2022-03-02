@@ -6,14 +6,19 @@ import { CoursesService } from "./courses.service";
     template: `
     <h2>{{"Title: "+title}}</h2>
     <h2 [textContent]="title"></h2>
-
+    <table>
+    <tr>
+        <td [attr.colSpan]="colSpan"></td>
+    </tr>
+    </table>
     <img src="{{imageUrl}}" /> 
     <img [src]="imageUrl" />
     `
     /* 
     {{variable}} This is called interpolation
     [property]="variable" This is property binding
-    
+    [attr.attributeName]="variable" This is attribute binding
+
     Interpolarion work well for heading,div tags.
     Everytime variable change property value will be changed.
     Both are okay for binding variables.
@@ -21,6 +26,7 @@ import { CoursesService } from "./courses.service";
     */
 })
 export class CoursesComponent {
+    colSpan=2
     title = "List of courses"
     imageUrl = "https://picsum.photos/200/300"
 }
