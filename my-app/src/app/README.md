@@ -49,3 +49,14 @@ We can use this commmand line to create and register a new service
 ng g s email
 # ng generate service service-name
 ```
+
+## ch-12-property-binding
+{{variable}} This is called interpolation
+
+\[property\]="variable"` This is property binding
+
+Interpolarion work well for heading,div tags.
+Everytime variable change property value will be changed.
+
+Both are okay for binding variables.
+Choose according to your own need.
