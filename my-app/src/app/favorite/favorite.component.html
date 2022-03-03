@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="box a">MenuBar</div>
+  <div class="box b">SideBar</div>
+  <div class="box graphContainer"(wheel)="onSave($event)">
+    <div class="box grapHeader">Editor header</div>
+    <div class="box graphEditor"  >
+        <div 
+        class="grid" 
+        [style.transform]="'scale('+scale+','+scale+')'"
+        [style.opacity]="scale*scale*scale"
+        >
+          <span>Editor Main</span> 
+        </div>
+    </div>
+  </div>
+</div>

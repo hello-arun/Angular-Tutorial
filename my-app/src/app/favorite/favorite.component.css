@@ -1,0 +1,71 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  background-color: var(--NEBgColor);
+
+  display: grid;
+  height: 100vh;
+  grid-gap: 4px;
+  grid-template-rows: 2rem Auto;
+  grid-template-columns: 4rem Auto;
+  grid-template-areas: "a a ""a a ""b c";
+}
+
+.box {
+  background-color: var(--NEBgColor);
+  color: white;
+  border: 1px;
+  border-style: dashed;
+  font-size: 100%;
+  overflow: hidden;
+}
+
+.a {
+  grid-area: a;
+}
+
+.b {
+  grid-area: b;
+}
+
+.graphContainer {
+  border: 0px;
+  grid-area: c;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-rows: 1.5em Auto;
+  grid-template-columns: Auto;
+  grid-template-areas: "ca""cb";
+  overflow: hidden;
+
+}
+
+.graphHeader {
+  grid-area: ca;
+}
+
+.graphEditor {
+  grid-area: cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  /* display: flex; */
+  /* text-align: center; */
+  /* justify-content: center; */
+  background-color: var(--NEBgColor); opacity: 1;
+  flex-shrink: 0;
+  width: 6000px;
+  height: 6000px;
+  /* background-size: 99.99% auto;  */
+  background-image:
+    repeating-linear-gradient(var(--NEEgColor) 0px 1px, transparent 1px 100%),
+    repeating-linear-gradient(90deg, var(--NEEgColor) 0 1px, transparent 1px 100%);
+  background-size: 50px 50px;
+}
