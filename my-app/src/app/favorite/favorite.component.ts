@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoriteComponent implements OnInit {
   scale = 1.0
-  color = "red"
+
   constructor() { }
 
   ngOnInit(): void {
@@ -19,5 +19,8 @@ export class FavoriteComponent implements OnInit {
   onSave($event: WheelEvent) {
     $event.stopPropagation();
     this.scale += 0.001 * $event.deltaY
+    if (this.scale < 0.25) {
+      this.scale = 0.25
+    }
   }
 }

@@ -6,7 +6,6 @@ body {
 
 .wrapper {
   background-color: var(--NEBgColor);
-
   display: grid;
   height: 100vh;
   grid-gap: 4px;
@@ -56,16 +55,27 @@ body {
 }
 
 .grid {
-  /* display: flex; */
-  /* text-align: center; */
-  /* justify-content: center; */
-  background-color: var(--NEBgColor); opacity: 1;
+  background-color: var(--NEBgColor);
+  opacity: 1;
   flex-shrink: 0;
   width: 6000px;
   height: 6000px;
-  /* background-size: 99.99% auto;  */
   background-image:
-    repeating-linear-gradient(var(--NEEgColor) 0px 1px, transparent 1px 100%),
-    repeating-linear-gradient(90deg, var(--NEEgColor) 0 1px, transparent 1px 100%);
-  background-size: 50px 50px;
+    conic-gradient(at calc(100% - 2px) calc(100% - 2px), var(--line-color-1) 270deg, #0000 0),
+    conic-gradient(at calc(100% - 1px) calc(100% - 1px), var(--line-color-2) 270deg, #0000 0);
+  background-size: 100px 100px, 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.element1 {
+  flex-shrink: 0;
+  font-size: 200%;
+  text-align: center;
+  border: 2px;
+  border-style: solid;
+  border-radius: 15px;
+  /* width: 100px; */
+  /* height: 100px; */
 }
